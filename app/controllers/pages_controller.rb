@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
   def home
-    @links = ['approche', 'page2', 'page3', 'philosophie', 'clients', 'contact']
+
   end
 
 
