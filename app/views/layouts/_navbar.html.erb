@@ -1,6 +1,35 @@
+
+
 <%page_title%>
-<% @links.each do |l|  %>
-  <li><%= link_to "#{l}" do %>
-    <%= l %></li>
-    <%end%>
-<%end%>
+
+<div class="container violet">
+<div class="btn-group">
+	<button type="bouton" class="btn-group contour dropdown-toggle color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	  <div >
+		<div class="barre "></div>
+	    <div class="barre menu"></div>
+	    <div class="barre "></div>
+	   </div>
+	   	</button>
+	  <ul class="dropdown-menu">
+	<% @count = @links.count%>
+	<% @links.each do |l|  %>
+	<li><%= link_to "#{l}" do %>
+	    <%= l %></li>
+	    <% @count = @count - 1%>
+	    <%end%>
+	    <% if  @count == 0 %>
+	    <%else%>
+	    	<li role="separator" class="divider"></li>
+	    <%end%>
+	    	<%end%>
+	  </ul>
+	  </div>	
+	</div>
+	
+ 
+
+  
+
+
+
