@@ -1,3 +1,7 @@
+.color {
+	background: transparent;
+}
+
 #home {
   	min-width: 500px;
    }
@@ -5,6 +9,20 @@
 .orange {
 	background: #FF9B00;
 }
+
+.violet {
+	background: #4916A1;
+	width: 100%;
+	padding-top: 10px;
+}
+
+.btn_blanc {
+	width: 80px;
+	height: 80px;
+	background: #FFFFFF;
+	float: right;
+}
+
 
 #full {
 	max-width: 1000px;
@@ -62,4 +80,28 @@
 
 .flexitem {
 	flex: 0 0 20%;
+}
+
+.contour {
+	border-radius: 99px;
+   border: 2px solid #FFFFFF;
+   margin-bottom: 8px;
+   width: 40px;
+   height: 40px;
+   display: -webkit-flex;
+   -webkit-align-items: center;
+   -webkit-justify-content: center;
+
+}
+
+.menu {
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+.barre {
+	display: block;
+   background: #ece4e4 ;
+   width: 20px;
+   height: 2px;
 }
