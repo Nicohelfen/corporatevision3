@@ -14,8 +14,8 @@
 	  <ul class="dropdown-menu">
 	<% @count = @links.count%>
 	<% @links.each do |l|  %>
-	<li><%= link_to "#{l}" do %>
-	    <%= l %></li>
+	<li><%= link_to "#{l[0]}" do %>
+	    <%= l[1] %></li>
 	    <% @count = @count - 1%>
 	    <%end%>
 	    <% if  @count == 0 %>
@@ -24,12 +24,12 @@
 	    <%end%>
 	    	<%end%>
 	  </ul>
-	  </div>	
+	  </div>
 	</div>
-	
- 
 
-  
+
+
+
 
 
 
