@@ -2,30 +2,45 @@
 
 <%page_title%>
 
-<div class="container violet">
-<div class="btn-group">
-	<button type="bouton" class="btn-group contour dropdown-toggle color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	  <div >
-		<div class="barre "></div>
-	    <div class="barre"></div>
-	    <div class="barre "></div>
-	   </div>
+<div class="container orange_nav flexbox_menu" style="padding-left: 0">
+	<div class="btn-group hid" style="position: absolute; top: 15px; left: 2vh">
+		<button type="bouton" class="btn-group contour dropdown-toggle color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	  		<div >
+				<div class="barre "></div>
+	    		<div class="barre"></div>
+	    		<div class="barre "></div>
+	   		</div>
 	   	</button>
-	  <ul class="dropdown-menu">
-	<% @count = @links.count%>
-	<% @links.each do |l|  %>
-	<li><%= link_to "#{l[0]}" do %>
-	    <%= l[1] %></li>
-	    <% @count = @count - 1%>
-	    <%end%>
-	    <% if  @count == 0 %>
-	    <%else%>
-	    	<li role="separator" class="divider"></li>
-	    <%end%>
+	  	<ul class="dropdown-menu">
+			<% @count = @links.count%>
+				<% @links.each do |l|  %>
+					<li><%= link_to "#{l[0]}" do %>
+	    				<%= l[1] %></li>
+	    				<% @count = @count - 1%>
+	    			<%end%>
+	    		<% if  @count == 0 %>
+	    		<%else%>
+	    			<li role="separator" class="divider"></li>
+	    		<%end%>
 	    	<%end%>
-	  </ul>
-	  </div>
+	  	</ul>
 	</div>
+	
+	<ul class="hid_menu" id="nav">
+		<li class="<%= 'act' if current_page?(digital_learning_url) %>"><a href="digital-learning">Digital Learning</a></li>
+   		<li class="<%= 'act' if current_page?(plateforme_lms_url) %>"><a href="plateforme-lms">Plateforme LMS</a></li>
+   		<li><a href="expertise-santé-sécurité">Expertise Santé Sécurité</a></li>
+   		<li class="<%= 'act' if current_page?(vision3_url) %>"><a href="vision3">Vision 3</a></li>
+   		<li class="<%= 'act' if current_page?(clients_url) %>"><a href="clients">Clients</a></li>
+   		<li class="<%= 'act' if current_page?(contact_url) %>"><a href="contact">Contact</a></li>
+	</ul>
+	<a href="/">
+	<div style="position: absolute; top: 10px; right: 2vh">
+		<%=image_tag("header_logo3.png", :class=> 'logo_nav')%>
+	</div>
+	</a>
+	<div style="width: 100%; padding: 0; margin: 0; height: 5px; position: absolute; top: 70px; left: 0px; background: #4916A1"></div>
+</div>
 
 
 
