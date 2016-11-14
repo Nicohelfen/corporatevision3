@@ -25,11 +25,11 @@
 	    	<%end%>
 	  	</ul>
 	</div>
-	
+
 	<ul class="hid_menu" id="nav">
 		<li class="<%= 'act' if current_page?(digital_learning_url) %>"><a href="digital-learning">Digital Learning</a></li>
    		<li class="<%= 'act' if current_page?(plateforme_lms_url) %>"><a href="plateforme-lms">Plateforme LMS</a></li>
-   		<li><a href="expertise-santé-sécurité">Expertise Santé Sécurité</a></li>
+   		<li class="<%= 'act' if current_page?(expertise_sante_securite_url) %>"><a href="expertise-sante-securite">Expertise Santé Sécurité</a></li>
    		<li class="<%= 'act' if current_page?(vision3_url) %>"><a href="vision3">Vision 3</a></li>
    		<li class="<%= 'act' if current_page?(clients_url) %>"><a href="clients">Clients</a></li>
    		<li class="<%= 'act' if current_page?(contact_url) %>"><a href="contact">Contact</a></li>
