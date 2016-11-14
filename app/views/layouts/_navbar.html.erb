@@ -3,6 +3,7 @@
 <%page_title%>
 
 <div class="container orange_nav flexbox_menu" style="padding-left: 0">
+
 	<div class="btn-group hid" style="position: absolute; top: 15px; left: 2vh">
 		<button type="bouton" class="btn-group contour dropdown-toggle color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	  		<div >
@@ -26,15 +27,22 @@
 	  	</ul>
 	</div>
 
-	<ul class="hid_menu" id="nav">
-		<li class="<%= 'act' if current_page?(digital_learning_url) %>"><a href="digital-learning">Digital Learning</a></li>
-   		<li class="<%= 'act' if current_page?(plateforme_lms_url) %>"><a href="plateforme-lms">Plateforme LMS</a></li>
-   		<li class="<%= 'act' if current_page?(expertise_sante_securite_url) %>"><a href="expertise-sante-securite">Expertise Santé Sécurité</a></li>
-   		<li class="<%= 'act' if current_page?(vision3_url) %>"><a href="vision3">Vision 3</a></li>
-   		<li class="<%= 'act' if current_page?(clients_url) %>"><a href="clients">Clients</a></li>
-   		<li class="<%= 'act' if current_page?(contact_url) %>"><a href="contact">Contact</a></li>
-	</ul>
-	<a href="/">
+
+  <div class="hid_menu" id="nav">
+  	<ul ><% @links.each do |l|  %>
+      <% if "/#{l[0]}" == request.env['PATH_INFO']%>
+        <li class="act">
+      <%else%>
+        <li>
+      <%end%>
+        <%= link_to "#{l[0]}" do %>
+          <%= l[1] %></li>
+        <%end%>
+      <%end%>
+  	</ul>
+  </div>
+
+  <a href="/">
 	<div style="position: absolute; top: 10px; right: 2vh">
 		<%=image_tag("header_logo3.png", :class=> 'logo_nav')%>
 	</div>
