@@ -221,7 +221,7 @@ a:hover {
 	-khtml-user-select: none;    /* Konqueror */
 	-moz-user-select: none;      /* Firefox */
 	-ms-user-select: none;       /* Internet Explorer/Edge */
-	user-select: none; 
+	user-select: none;
 }
 
 .flex_column {
@@ -285,10 +285,11 @@ a:hover {
 
 .hid_menu {
 	visibility: visible;
+  float: left;
 }
 
 @media screen and (min-width: 0px) and (max-width: 750px) {
-	
+
 	.message {
 		color: #534963;
 		font-family: 'Roboto', sans-serif;
@@ -301,7 +302,7 @@ a:hover {
 		justify-content: space-around;
 		align-items: center;
 	}
-	
+
 	.flexbox {
 		display: flex;
 		flex-direction: column;
@@ -309,7 +310,7 @@ a:hover {
 		justify-content: center;
 		align-items: center;
 	}
-	
+
 	.flexbox_navbar {
 		display: flex;
 		flex-direction: column;
@@ -322,7 +323,7 @@ a:hover {
 		justify-content: center;
 		align-items: center;
 }
-	
+
 	#sante {
 		margin-top: 2em;
 	}
@@ -334,7 +335,7 @@ a:hover {
 	#plateforme {
 		margin: auto;
 	}
-	
+
 	#footer {
 		position: relative;
 		width:100%;
@@ -356,7 +357,7 @@ a:hover {
 
 /* NavBar CSS */
 
-#nav 
+#nav
 {
    margin: 0;
    padding: 0;
@@ -365,10 +366,8 @@ a:hover {
 #nav li {
 	display: inline;
 	margin: 0;
-   	padding: 0;
+  padding: 0;
 	color: #534963;
-	text-align: center;
-
 }
 
 #nav a:link, #nav a:visited {
@@ -376,23 +375,23 @@ a:hover {
 	font-family: 'Roboto', sans-serif;
 	font-size: 15px;
 	padding: 0px 7px 0px 5px;
-   	float: left;
-   	width: auto;
+  float: left;
+  width: auto;
 }
 
 #nav a:hover {
 	color: #FF9B00;
 }
 
-.act a:link, .act a:visited {
+.act {
 	color: #FF9B00 !important;
 	font-family: 'Roboto', sans-serif;
 	font-size: 15px;
 	padding: 0px 7px 0px 5px;
-   	float: left;
-   	width: auto;
-   	border-top: 5px solid #4916A1;
-   	margin-top: -5px;
+  float: left;
+  width: auto;
+  border-top: 5px solid #4916A1;
+  margin-top: -5px;
 
 }
 
