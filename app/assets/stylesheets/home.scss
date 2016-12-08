@@ -3,15 +3,22 @@ a:hover {
 }
 
 #home {
-  	height: 100%;
   	-webkit-font-smoothing: antialiased;
    }
 
 .wrapper_gradient {
-	background: linear-gradient(-20deg, rgba(73,22,161,0.5), rgba(255,155,0,0.5));
+	background: linear-gradient(-20deg, rgba(73,22,161,1), rgba(255,155,0,1));
+}
+
+.wrapper_triangle_inverse {
+	background-image: linear-gradient(-20deg, rgba(255,155,0,0.6), rgba(73,22,161,0.6)) ,url("fond_triangle_petit.png");
 }
 
 .wrapper_triangle {
+	background-image: linear-gradient(-20deg, rgba(73,22,161,0.6), rgba(255,155,0,0.6)) ,url("fond_triangle_petit.png");
+}
+
+.wrapper_image {
 	background-image: url("tableau.png");
 	background-size: cover;
 	display: flex;
@@ -19,42 +26,13 @@ a:hover {
 	justify-content: center;
 }
 
+.bg_camille {
+	background-image: url("qfn_santesecurite_photo");
+	background-size: cover;
+}
+
 .orange {
 	background: #FF9B00;
-}
-
-.separator_triangle {
-	width:0px;
-	border:30px solid transparent;
-	border-left:40px solid #4916A1;
-}
-
-.separator_triangle_inverse {
-	width:0px;
-	border:30px solid transparent;
-	border-right:40px solid #4916A1;
-}
-
-.form_folder_right {
-	width: 400px;
-	height: 0;
-	border-bottom: 50px solid #ffffff;
-	border-left: 60px solid #19c0fa;
-}
-
-.form_folder_left {
-	width: 400px;
-	height: 0;
-	border-bottom: 50px solid #ffffff;
-	border-right: 60px solid #19c0fa;
-}
-
-.title_folder {
-	font-family: 'Roboto';
-	color: #FF9B00;
-	font-size: 30pt;
-	font-style: italic;
-	margin: 0;
 }
 
 .btn_blanc {
@@ -62,21 +40,6 @@ a:hover {
 	height: 80px;
 	background: #FFFFFF;
 	float: right;
-}
-
-
-#full {
-	max-width: 1000px;
-	margin-top: 0px;
-	padding-top: 50px;
-	background: #FFFFFF;
-}
-
-#full_top {
-	max-width: 1000px;
-	background: #FFFFFF;
-	padding-top: 50px;
-	padding-bottom: 50px;
 }
 
 .h1 {
@@ -104,62 +67,8 @@ a:hover {
 	height: 150px;
 }
 
-.item_center {
-	-webkit-align-items: center;
-	-webkit-justify-content: center;
-	justify-content: center;
-	align-items: center;
-	padding: auto;
-}
-
-.image_center {
-	padding: 5px;
-	display: flex;
-	justify-content: space-around;
-}
-
-#picto_down {
-	margin-top: 150px;
-}
-
-#picto_left {
-	margin-left: 60px;
-	margin-right: -30px;
-}
-
-#picto_right {
-	margin-left: -30px;
-}
-
 .center {
 	text-align: center;
-}
-
-.flexbox2 {
-	display: flex;
-	padding: 5px;
-	justify-content: right;
-	align-items: center;
-}
-
-.flexbox3 {
-	padding: 0;
-	display: flex;
-	height: 290px;
-	justify-content: flex-end;
-	align-items: center;
-}
-
-.flexbox4 {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-}
-
-.flexbox5 {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
 }
 
 .flex_center {
@@ -174,20 +83,28 @@ a:hover {
 	align-items: flex-start;
 }
 
+.flex_right {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.flex_client {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
 .flex_bottom {
 	display: flex;
 	justify-content: space-around;
 	align-items: flex-end;
 }
 
-.flexitem {
-	float: right;
-}
-
 #container {
 	height: auto;
-	min-height: calc(100vh - 130px);
-	background-color: rgba(255, 255, 255, 0.6);
+	min-height: calc(100vh - 120px);
+	background-color: rgba(255, 255, 255, 0.7);
 }
 
 #header {
@@ -301,23 +218,17 @@ a:hover {
 	align-items: flex-end;
 }
 
-.flexbox_navbar {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-}
-
 #sante {
    margin-top: -10em;
 }
 
 #sante:hover {
 	transform: scale(1.05);
-	-webkit-transition: all 800ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-   	-moz-transition: all 800ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-    -ms-transition: all 800ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-	-o-transition: all 800ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-    transition: all 800ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+	-webkit-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+   	-moz-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -ms-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+	-o-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
 	-webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
@@ -328,11 +239,11 @@ a:hover {
 
 #contenu:hover {
 	transform: scale(1.05);
-	-webkit-transition: all 800ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-   	-moz-transition: all 800ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-    -ms-transition: all 800ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-	-o-transition: all 800ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-    transition: all 800ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+	-webkit-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+   	-moz-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -ms-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+	-o-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
 	-webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
@@ -343,11 +254,11 @@ a:hover {
 
 #plateforme:hover {
 	transform: scale(1.05);
-	-webkit-transition: all 800ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-   	-moz-transition: all 800ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-    -ms-transition: all 800ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-	-o-transition: all 800ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-    transition: all 800ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+	-webkit-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+   	-moz-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -ms-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+	-o-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
 	-webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
@@ -558,38 +469,5 @@ a:hover {
 .logo_nav {
 	height: 50px;
 	width: auto;
-}
-
-.contour {
-	border-radius: 99px;
-    border: 2px solid #4916A1;
-    margin-bottom: 8px;
-    width: 40px;
-    height: 40px;
-    display: -webkit-flex;
-    -webkit-align-items: center;
-    -webkit-justify-content: center;
-
-}
-
-.barre {
-	display: block;
-    background: #4916A1 ;
-    width: 20px;
-    height: 2px;
-    margin-top: 4px;
-	margin-bottom: 4px;
-	-webkit-transition: transform 2s; /* For Safari 3.1 to 6.0 */
-    transition: transform 2s;
-}
-
-.barre :hover {
-	webkit-transform: rotate(45deg);
-     -transform: rotate(45deg);
-}
-
-.deploi {
-	width: 500px;
-	height: 700px;
 }
 
