@@ -13,7 +13,7 @@ gem 'httparty'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 
-gem 'pg', '~> 0.18.3'
+gem 'pg', '~> 0.18.4'
 # Use SCSS for stylesheets
 gem 'puma',           group: :production
 gem 'rails_12factor', group: :production
